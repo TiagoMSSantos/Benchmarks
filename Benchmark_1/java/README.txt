@@ -1,5 +1,5 @@
 # Compile
-javac -cp benchmark_1/java -d benchmark_1/java/build benchmark_1/java/BenchMark.java
+javac -cp Benchmark_1/java -d Benchmark_1/java/build Benchmark_1/java/src/BenchMark.java
 
-# Execute
-java -cp benchmark_1/java benchmark_1/java/BenchMark
+# Run
+cd Benchmark_1/java; time java -cp ./build BenchMark; cd ../..;

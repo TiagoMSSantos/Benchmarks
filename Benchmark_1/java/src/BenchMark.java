@@ -18,8 +18,8 @@ public class BenchMark {
         final String[] words2 = bufferedReader.readLine().split(" ");
         bufferedReader.close();
 
-        System.out.println("words1 = " + Arrays.toString(words1) + ", size = " + words1.length);
-        System.out.println("words2 = " + Arrays.toString(words2) + ", size = " + words2.length);
+        //System.out.println("words1 = " + Arrays.toString(words1) + ", size = " + words1.length);
+        //System.out.println("words2 = " + Arrays.toString(words2) + ", size = " + words2.length);
 
         final long start = System.nanoTime();
         final boolean result1 = sameContent(words1, words2);

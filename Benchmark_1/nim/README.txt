@@ -1,5 +1,5 @@
 # Compile
 nim c benchmark_1/nim/benchmark.nim
 
-# Execute
+# Run
 ./benchmark_1/nim/benchmark

@@ -15,8 +15,8 @@ object BenchMark {
     val words1 : Array[String] = bufferedReader.readLine.split(" ")
     val words2 : Array[String] = bufferedReader.readLine.split(" ")
     bufferedReader.close()
-    System.out.println("words1 = " + words1.mkString(" ") + ", size = " + words1.length)
-    System.out.println("words2 = " + words2.mkString(" ") + ", size = " + words2.length)
+    //System.out.println("words1 = " + words1.mkString(" ") + ", size = " + words1.length)
+    //System.out.println("words2 = " + words2.mkString(" ") + ", size = " + words2.length)
     val start = System.nanoTime
     val result1 = sameContent(words1, words2)
     val end = System.nanoTime

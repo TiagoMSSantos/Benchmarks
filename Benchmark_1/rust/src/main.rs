@@ -53,7 +53,7 @@ fn read_file() -> Result<String, Box<dyn std::error::Error + 'static>> {
 fn main() {
     hello_world();
     let file_text = read_file();
-    println!("file: {:#?}", file_text);
+    //println!("file: {:#?}", file_text);
 
     let text = file_text.unwrap();
     let mut lines = text.lines();
@@ -61,14 +61,14 @@ fn main() {
     let line1 = lines.next().unwrap();
     let mut chars_line1: Vec<char> = line1.chars().collect();
     chars_line1.sort();
-    println!("line 1: {:#?}", line1);
-    println!("line 1: {:#?}", chars_line1);
+    //println!("line 1: {:#?}", line1);
+    //println!("line 1: {:#?}", chars_line1);
 
     let line2 = lines.next().unwrap();
     let mut chars_line2: Vec<char> = line2.chars().collect();
     chars_line2.sort();
-    println!("line 2: {:#?}", line2);
-    println!("line 2: {:#?}", chars_line2);
+    //println!("line 2: {:#?}", line2);
+    //println!("line 2: {:#?}", chars_line2);
 
     let matching = chars_line1.iter().zip(&chars_line2).filter(|&(a, b)| a == b).count();
     println!("{}", matching == chars_line1.len() && matching == chars_line2.len());
