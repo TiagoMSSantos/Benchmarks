@@ -9,6 +9,7 @@ struct Position {
     y: i8,
 }
 
+#[allow(dead_code)]
 impl Position {
     fn update_x(&mut self) {
         self.x += 1;
@@ -20,6 +21,7 @@ impl Position {
     }
 }
 
+#[allow(dead_code)]
 fn hello_world() {
     let x = 10;
     let mut y :&i8 = &x;
@@ -51,7 +53,7 @@ fn read_file() -> Result<String, Box<dyn std::error::Error + 'static>> {
 }
 
 fn main() {
-    hello_world();
+    //hello_world();
     let file_text = read_file();
     //println!("file: {:#?}", file_text);
 
@@ -71,5 +73,7 @@ fn main() {
     //println!("line 2: {:#?}", chars_line2);
 
     let matching = chars_line1.iter().zip(&chars_line2).filter(|&(a, b)| a == b).count();
-    println!("{}", matching == chars_line1.len() && matching == chars_line2.len());
+
+    println!("RUST");
+    println!("result1 = {}", matching == chars_line1.len() && matching == chars_line2.len());
 }

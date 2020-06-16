@@ -17,10 +17,8 @@ object BenchMark {
     bufferedReader.close()
     //System.out.println("words1 = " + words1.mkString(" ") + ", size = " + words1.length)
     //System.out.println("words2 = " + words2.mkString(" ") + ", size = " + words2.length)
-    val start = System.nanoTime
     val result1 = sameContent(words1, words2)
-    val end = System.nanoTime
-    val timeInMs = (end - start) / 1000000
-    System.out.println("result1 = " + result1 + ", time = " + timeInMs + "ms")
+    System.out.println("SCALA")
+    System.out.println("result1 = " + result1)
   }
 }
