@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
-
+use rayon::prelude::*;
 
 // #[derive(Debug)]
 // struct Position {
@@ -61,11 +61,11 @@ fn main() {
 
     let line1 : &str = lines.next().unwrap();
     let mut chars_line1 : Vec<char> = line1.chars().collect::<Vec<char>>();
-    chars_line1.sort_unstable();
+    chars_line1.par_sort_unstable();
 
     let line2 : &str = lines.next().unwrap();
     let mut chars_line2 : Vec<char> = line2.chars().collect();
-    chars_line2.sort_unstable();
+    chars_line2.par_sort_unstable();
 
     let matching : usize = chars_line1.iter().zip(&chars_line2).filter(|&(a, b)| a == b).count();
 
