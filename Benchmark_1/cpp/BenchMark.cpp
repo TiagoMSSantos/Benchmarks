@@ -1,12 +1,14 @@
 #include <string>
 #include <fstream>
 #include <iostream>
-#include <bits/stdc++.h> 
-
+#include <algorithm>
+#include <parallel/algorithm>
 
 bool sameContent(::std::string *words1, ::std::string *words2) {
-  ::std::sort(words1->begin(), words1->end());
-  ::std::sort(words2->begin(), words2->end());
+  // ::std::sort(words1->begin(), words1->end());
+  // ::std::sort(words2->begin(), words2->end());
+  __gnu_parallel::sort(words1->begin(), words1->end());
+  __gnu_parallel::sort(words2->begin(), words2->end());
 
   //::std::cout << "words1: " << *words1 << '\n';
   //::std::cout << "words2: " << *words2 << '\n';
