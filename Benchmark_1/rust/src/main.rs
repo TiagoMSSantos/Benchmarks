@@ -64,11 +64,12 @@ fn main() {
     chars_line1.par_sort_unstable();
 
     let line2 : &str = lines.next().unwrap();
-    let mut chars_line2 : Vec<char> = line2.chars().collect();
+    let mut chars_line2 : Vec<char> = line2.chars().collect::<Vec<char>>();
     chars_line2.par_sort_unstable();
 
     let matching : usize = chars_line1.iter().zip(&chars_line2).filter(|&(a, b)| a == b).count();
 
-    println!("RUST");
+    let num_threads : usize = rayon::current_num_threads();
+    println!("RUST: {}", num_threads);
     println!("result1 = {}", matching == chars_line1.len() && matching == chars_line2.len());
 }
